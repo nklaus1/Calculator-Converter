@@ -41,6 +41,7 @@ height: 650px;">
 
 
 <button onclick="myFunction()">Try it</button>
+<p id="demo">A Paragraph</p>
 
 <div class="paragraph">
 <p>Texas Instruments has had a strong grip on the calculator market for pretty much as long as we remember. A TI-84, a standard graphing calculator costs nearly $116, but Texas instruments main competitors Casio and HP have calculators with the same functions which cost significantly less. Seeing as 60% of americans could not withstand a $1000 emergency, a burden of $115 dollars for a calculator certainly isn’t palatable. The problem is that many students and teachers don’t know how to use these calculators, decreasing competition and adding financial burden. We have built a website that can show kids how to use cheaper competitor calculators to reduce the financial strain on low income families and to help increase innovation in the calculator market.</p>
@@ -52,7 +53,7 @@ height: 650px;">
 
 <script>
 	function myFunction() {
-		http://api.wolframalpha.com/v2/query?input=pi&appid=E6G7W8-AAU5VJQ6U8;
+		document.getElementById("demo").innerHTML = http://api.wolframalpha.com/v2/query?input=pi&appid=E6G7W8-AAU5VJQ6U8;
 
 	}
 </script>
