@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.paragraph {
+color: white;
+width: 50%;
+padding-left: 50px;
+box-sizing: border-box;
+background-color: #333333;
+padding: 10px;
+
+}
+body {
+  margin: 0;
+  background-image: url("https://i.pinimg.com/originals/aa/c4/50/aac450a89b8c848b0b6cb3582d1a36c6.jpg");
+  background-size: 100%;
+  height: 100%
+  background-repeat: no-repeat;
+}
+
+/* Style the header */
+.header {
+  padding: 5px;
+  text-align: center;
+  color: orange
+}
+.subheader {
+  padding: 5px;
+  color: orange;
+  padding-left: 20%;
+  box-sizing: border-box;
+  background-color: #171717;
+  width: 50%;
+}
+p.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 2px;
+  background-color:  #0A00AD;
+  border: 0px solid #0000ff;
+}
+/* Style the topnav links */
+
+.topnav a {
+  float: left;
+  display: block;
+  color: orange;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #171717;
+  color: #0A00AD;
+}
+
+</style>
+</head>
+<body>
+	<div class="header">
+  		<h1>
+        	About Us
+        </h1>
+  		<p>
+        	A glimpse into the upbringing of true geniuses
+        </p>
+	</div>
+	<div class="sticky">
+		<div class="topnav">
+  			<a href="#">
+                Home
+            </a>
+  			<a href="#">
+              	About Us
+            </a>
+  			<a href="#">
+                Our Solutions
+            </a>
+            
+		</div>
+	</div>
+ 	<h3>
+    	<div class="subheader">
+    		Brode Wall
+        </div>
+    </h3>
+   	<p>
+    <div class="paragraph">
+    	Co-founder for C^2, He is a senior at University High 			School who originally came up with the main idea to 			integrate a website that helps take some financial 				stress of lower income students. Along with this 		         project, he enjoys cross country and working with               others. 
+    </div>
+    </p>
+    <h3>
+    	<div class="subheader">
+    		Noah Klauss
+        </div>
+    </h3>
+    <p>
+    <div class="paragraph">
+    	Co-founder for C^2, He is a senior at University High 			School who, along with Brode Wall, decided to take up a 		project for their Digital Computing Class.  An absolute         fashion icon some would say
+    </div>
+    </p>
+</body>
+</html>
