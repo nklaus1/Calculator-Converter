@@ -42,18 +42,7 @@ height: 650px;">
 
 <button onclick="myFunction()">Try it</button>
 	
-var request = new XMLHttpRequest()
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'http://api.wolframalpha.com/v2/query?input=pi&appid=E6G7W8-AAU5VJQ6U8', true)
-
-request.onload = function() {
-  // Begin accessing JSON data here
-	var data = this.response
-}
-
-// Send request
-request.send()
 	
 	<p>data</p>
 
@@ -67,7 +56,17 @@ request.send()
 
 <script>
 	function myFunction() {
-		document.getElementById("demo").innerHTML = http://api.wolframalpha.com/v2/query?input=pi&appid=E6G7W8-AAU5VJQ6U8;
+		var request = new XMLHttpRequest()
 
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'http://api.wolframalpha.com/v2/query?input=pi&appid=E6G7W8-AAU5VJQ6U8', true)
+
+request.onload = function() {
+  // Begin accessing JSON data here
+	var data = this.response
+}
+
+// Send request
+request.send()
 	}
 </script>
