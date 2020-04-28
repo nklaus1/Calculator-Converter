@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+ 
+
+<body>
+
+ 
+
+  <h2>Wolfram Alpha Test</h2>
+
+  <p>This code will make a simple Wolfram Alpha query and display one item extracted from the response</p>
+
+ 
+
+  <h3>Target Content</h3>
+
+  <p id="output1">Waiting for target content ...</p>
+
+  <h3>Full Output</h3>
+
+  <p id="output2">Waiting for full output...</p>
+
+ 
+
+  <script>
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.responseType = "json"; // xhr.response will be parsed into a JSON object
+
+    xhr.open('GET', "http://api.wolframalpha.com/v2/query?input=pi&appid=E6G7W8-AAU5VJQ6U8&output=json", true);
+
+    xhr.send();
+
+ 
+
+    xhr.onreadystatechange = processRequest;
+
+ 
+
+    function processRequest(e) {
+
+      if (xhr.readyState == 4 && xhr.status == 200) {
+
+        alert("Done.")
+
+ 
+
+        var pods = xhr.response.queryresult.pods; 
+
+        for (i = 0; i < pods.length; i++) {
+
+           if(pods[i].title == "Decimal approximation"){
+
+            var plaintext =  pods[i].subpods[0].plaintext;
+
+              document.getElementById("output1").innerHTML = plaintext;
+
+           }
+
+        }
+
+        
+
+        var outputString = JSON.stringify(xhr.response)
+
+        document.getElementById("output2").innerHTML = outputString;
+
+      }
+
+    }
+
+ 
+
+  </script>
+
+ 
+
+</body>
+
+ 
+
+</html>
