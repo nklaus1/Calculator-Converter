@@ -41,7 +41,7 @@
  
 
     function processRequest(e) {
-          alert("Start");
+
       if (xhr.readyState == 4 && xhr.status == 200) {
 
         alert("Done.")
@@ -51,7 +51,7 @@
         var pods = xhr.response.queryresult.pods; 
 
         for (i = 0; i < pods.length; i++) {
-
+           alert("Start");
            if(pods[i].title == "Decimal approximation"){
 
             var plaintext =  pods[i].subpods[0].plaintext;
