@@ -34,8 +34,6 @@
 
     xhr.send();
 
-     alert(xhr.readyState);
-    alert(xhr.status);
 
     xhr.onreadystatechange = processRequest;
 
@@ -43,6 +41,8 @@
 
     function processRequest(e) {
 
+     alert(xhr.readyState);
+    alert(xhr.status);
       if (xhr.readyState == 4 && xhr.status == 200) {
 
         alert("Done.")
