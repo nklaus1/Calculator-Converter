@@ -34,12 +34,12 @@
 
     xhr.send();
 
- 
+     alert(xhr.readyState);
+    alert(xhr.status);
 
     xhr.onreadystatechange = processRequest;
 
-    alert(xhr.readyState);
-    alert(xhr.status);
+
 
     function processRequest(e) {
 
