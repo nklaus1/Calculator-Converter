@@ -31,6 +31,128 @@
 
 
 <div class="calculator">
+	<script>
+// this string will hold the output text 
+var outputString = "";
+
+// this is an array of objects
+// the array is called "keys" and currently has 5 items
+// each item is an unnamed type of obejct with a "value","x" coord, and "y" coord
+// right now, only 5 keys are defined
+var keys = [
+  {
+    value: "1",
+    x: 244,
+    y: 498,
+  },
+  {
+    value: "2",
+    x: 284,
+    y: 498,
+  },
+  {
+    value: "3",
+    x: 324,
+    y: 498,
+  },
+  {
+    value: "4",
+    x: 244,
+    y: 460,
+  },
+  {
+    value: "5",
+    x: 284,
+    y: 460,
+  },
+  {
+    value: "6",
+    x: 324,
+    y: 460,
+  },
+  {
+    value: "7",
+    x: 244,
+    y: 422,
+  },
+  {
+    value: "8",
+    x: 284,
+    y: 422,
+  },
+  {
+    value: "9",
+    x: 324,
+    y: 422,
+  },
+  {
+    value: "0",
+    x: 244,
+    y: 535,
+  },
+  {
+    value: ".",
+    x: 284,
+    y: 535,
+  },
+  {
+    value: "(-)",
+    x: 324,
+    y: 535,
+  },
+  {
+    value: "+",
+    x: 371,
+    y: 490,
+  },
+  {
+    value: "enter",
+    x: 371,
+    y: 521,
+  },
+  {
+    value: "/",
+    x: 371,
+    y: 392,
+  },
+  {
+    value: "x",
+    x: 371,
+    y: 423,
+  },
+  {
+    value: "-",
+    x: 371,
+    y: 455,
+  }
+];
+// in this example, all keys have the same size,
+// so no sense in storing a new width and height for eack separate key
+var keyWidth = 30;
+var keyHeight = 30;
+
+// this function is called every time the mouse is clicked inside the image
+function mouseClick() {
+  // these coordiantes are relative to the upper left corner of the image
+  var mouseX = event.offsetX;
+  var mouseY = event.offsetY;
+  // output the mouse click coords for debugging
+  document.getElementById("coords").innerHTML = "x="+mouseX + " y=" + mouseY;
+  // check each key to see if it contains the mouse click
+  for (i = 0; i < keys.length; i++) {
+     if ( mouseX > keys[i].x && mouseX < keys[i].x + keyWidth){
+       if ( mouseY > keys[i].y && mouseY < keys[i].y + keyHeight){
+     	// append whatever the key value is to the end of the output string
+        outputString += keys[i].value;
+        }
+     }
+  }
+  // update the output string display
+  document.getElementById("output").innerHTML = outputString;
+  
+}
+
+</script>
 <img src="ti-84.jpg" 
 alt="Calculator (ti-84)"
 style="float:right; 
